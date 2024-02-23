@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preeclampsia Prediction</title>
+</head>
+<body>
+    <h2>Preeclampsia Prediction Form</h2>
+    <form method="post" action="/">
+        Age: <input type="text" name="Age" required><br>
+        Urinalysis: <input type="text" name="Urinalysis" required><br>
+         Pcv: <input type="text" name="Pcv" required><br>
+        Gestational_Age: <input type="text" name="Gestational_Age" required><br>
+         Blood_GroupBG: <input type="text" name="Blood_GroupBG" required><br>
+        HCV: <input type="text" name="HCV" required><br>
+         RVS: <input type="text" name="RVS" required><br>
+        PRbm: <input type="text" name="PRbm" required><br>
+         History_of_emclapsia_in_family: <input type="text" name="History_of_emclapsia_in_family" required><br>
+        HBSAG: <input type="text" name="HBSAG" required><br>
+         systolic_bp: <input type="text" name="systolic_bp" required><br>
+        diastolic_bp: <input type="text" name="diastolic_bp" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    {{ prediction }}
+</body>
+</html>
