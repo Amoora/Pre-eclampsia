@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Preeclampsia Prediction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preeclampsia Prediction Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*height: 100vh;*/
+        margin: 0;
+    }
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px; /* Adjust this value as needed */
+    }
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+    input[type="text"], input[type="submit"] {
+        width: calc(60% - 20px); /* Adjust width to account for padding */
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        border: none;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+</style>
 </head>
 <body>
-    <h2>Preeclampsia Prediction Form</h2>
-    <form method="post" action="/">
-        Age: <input type="text" name="Age" required><br>
-        Urinalysis: <input type="text" name="Urinalysis" required><br>
-         Pcv: <input type="text" name="Pcv" required><br>
-        Gestational_Age: <input type="text" name="Gestational_Age" required><br>
-         Blood_GroupBG: <input type="text" name="Blood_GroupBG" required><br>
-        HCV: <input type="text" name="HCV" required><br>
-         RVS: <input type="text" name="RVS" required><br>
-        PRbm: <input type="text" name="PRbm" required><br>
-         History_of_emclapsia_in_family: <input type="text" name="History_of_emclapsia_in_family" required><br>
-        HBSAG: <input type="text" name="HBSAG" required><br>
-         systolic_bp: <input type="text" name="systolic_bp" required><br>
-        diastolic_bp: <input type="text" name="diastolic_bp" required><br>
 
-        <input type="submit" value="Predict">
-    </form>
-    <br>
+    <div class="form-container">
+        <h2>Preeclampsia Prediction Form</h2>
+        <form method="post" action="/">
+<!--            <label for="Age">Age:</label>-->
+           Age: <input type="text" id="Age" name="Age" required><br>
+            Urinalysis: <input type="text" id="Urinalysis" name="Urinalysis" required><br>
+           Pcv:<input type="text" id="Pcv" name="Pcv" required><br>
+            Gestational Age: <input type="text" id="Gestational_Age" name="Gestational_Age" required><br>
+            Blood Group: <input type="text" id="Blood_GroupBG" name="Blood_GroupBG" required><br>
+            HCV: <input type="text" id="HCV" name="HCV" required><br>
+           RVS: <input type="text" id="RVS" name="RVS" required><br>
+           PRBm <input type="text" id="PRbm" name="PRbm" required><br>
+           History of eclampsia:<input type="text" id="History_of_emclapsia_in_family" name="History_of_emclapsia_in_family" required><br>
+           HBSAG:<input type="text" id="HBSAG" name="HBSAG" required><br>
+           Systolic BP: <input type="text" id="systolic_bp" name="systolic_bp" required><br>
+           Diastolic BP:<input type="text" id="diastolic_bp" name="diastolic_bp" required>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+ <br>
     {{ prediction }}
 </body>
 </html>
+
+
+

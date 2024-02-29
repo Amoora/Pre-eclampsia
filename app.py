@@ -30,8 +30,8 @@ def predict():
         # Make prediction
         prediction = model.predict([[feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8, feature9, feature10, feature11, feature12]])[0]
         if prediction == 0:
-            prediction = f'The prediction is not eclamsia {prediction}'
-        else: prediction = f'The prediction is Eclampsia {prediction}'
+            prediction = f'Preeclampsia not detected {prediction}'
+        else: prediction = f'Preeclampsia not detected {prediction}'
 
     return render_template('index.html', prediction=prediction)
 
